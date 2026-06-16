@@ -1,0 +1,298 @@
+ SYMBIOSIS CENTER OF CORPORATE AND
+PROFESSIONAL LEARNING
+(A Unit of Symbiosis Skills and Professional University)
+Requirement Document for CRM System
+Prepared By: Shivam Kumar Jha ASF BA01, NEW DELHI
+Guide Name – Mr. Lalit Taneja
+2025
+
+Index
+   Sr. No
+  Content
+    Page
+   1
+Introduction
+  3
+   2
+  Literature Review
+    4
+   3
+Problem Statement and Objectives
+  5
+   4
+ Stakeholder analysis
+   6-7
+   5
+  Business Requirement
+    8
+   6
+Methodology
+  9-12
+   7
+  Implementation
+    13
+   8
+Use Cases
+  14
+   9
+  Assumptions and constraints
+    15
+   10
+Result Analysis
+  16
+   11
+  Conclusion
+    16
+ 2
+
+1. Introduction
+1.1 Background
+Insurance firms face challenges managing customer data, tracking sales leads, policy issuance, claims, and customer support efficiently. Legacy systems lead to data silos, slower service, and lost business opportunities.
+1.2 Significance of the Project
+A CRM solution will integrate all customer-related activities, streamline workflows, and provide a single platform for managing prospects, policies, claims, and customer service. This enhances response time, data visibility, compliance, and customer satisfaction.
+1.3 Scope of Work
+· Requirement analysis for a CRM in insurance context
+· Stakeholder needs identification
+· System workflow definition (Lead Management, Policy Issuance, Customer Service, Customer Interaction)
+· Visual workflow diagrams
+· Implementation and expected results analysis
+3
+
+2. Literature Review
+2.1 Background Study
+CRM systems are extensively used in insurance to increase sales conversion, retention rates, and automate client management. Modern solutions facilitate omnichannel communication and data-driven decision-making.
+2.2 Review of Existing Solutions/Studies
+· Salesforce Financial Services Cloud: Used for insurance, supports policy lifecycle, claims and customer support.
+· Zoho CRM: Affordable multi-channel engagement tool, some limitations in deep insurance customizations.
+· Custom in-house built CRMs: Often lack scalability and integration capabilities. 2.3 Gaps Identified
+· Existing solutions may not address insurance-specific workflows (e.g., underwriting, KYC, claims analytics).
+· Limited integration across all communication channels and legacy systems.
+· Compliance reporting and audit trails not always robust.
+4
+
+3. Problem Statement and Objectives
+3.1 Clear Statement of the Problem
+The insurance firm lacks a unified platform to manage leads, policies, claims, and interactions, resulting in data silos, missed opportunities, inefficient processes, and poor customer service.
+3.2 Project Objectives
+· Centralize customer and lead management
+· Automate policy issuance and renewal workflows
+· Streamline claims processing and SLA tracking
+· Improve customer interaction tracking for service quality
+· Ensure regulatory compliance and audit readiness
+3.3 Expected Results
+· Reduce lead response times by 40%
+· Increase closed policy sales by 30%
+· Elevate customer satisfaction above 90%
+· Achieve >95% user adoption within 3 months
+5
+
+4. Stakeholder Analysis
+4.1 Expanded Stakeholder Needs List
+Below is the enhanced and detailed list of stakeholder needs for the CRM system:
+  Stakeholder
+Detailed Needs
+• Easy lead capture (mobile & desktop)
+• Team performance dashboards
+• Ticket creation with category & priority
+• SLA compliance reports
+• Access to verified customer KYC data
+• Policy issuance tracking
+• Secure, scalable platform
+  Sales Agents
+  • Automated reminders for follow-ups • Quick quotation generation
+• Unified customer profile view
+• Ability to record call notes & meeting outcomes
+• Lead prioritization suggestions (scoring)
+Sales Managers
+• Lead allocation and reassignment tools • Daily/weekly/monthly sales reports
+• Target vs achievement analytics
+• Insights into lead quality & pipeline bottlenecks
+Customer Service Executives
+• Customer interaction history access
+• SLA countdown timers
+• Escalation workflow support
+• Ability to attach documents/screenshots Customer Service Manager
+• Team workload visibility
+• Automated escalation triggers
+• Root-cause analysis for frequent issues Underwriting Team
+• Document upload & verification tools
+• Risk profiling dashboard
+• Approval workflow with status indicators Operations Team
+• Cancellation/endorsement management
+• Automated renewal reminders system
+• Accurate and clean customer data
+IT Team
+• Role-based access control
+• Integration support (SMS/Email/APIs)
+• System logs & audit trails
+                                                                              6
+
+  Senior Management
+• Revenue, retention & renewal insights • Policy performance trends
+• Data-driven decision support
+4.2 Stakeholder List and Needs
+• Business KPIs dashboard
+             Stakeholder
+Sales Agents Sales Managers
+Customer Service Team
+Underwriting Team
+Operations Team
+IT Team
+Senior Management
+Role
+Generate and convert leads
+Manage teams & targets
+Address customer queries
+Validate policy applications
+Policy processing
+System maintenance Strategic decisions
+Key Needs
+Easy lead entry, reminders, quick access to customer details
+Reports, performance dashboards, lead distribution tools
+Ticket creation, status tracking, full customer history
+Access to customer documents and risk profiling data
+Accurate customer data, automation of renewal reminders
+Secure, scalable, integrable platform Business insights, policy sales trends, KPIs
+                        7
+
+5. Business Requirements 5.1 Functional Requirements
+1. Lead Management
+o Capture leads from multiple sources (manual entry, website, referral)
+o Lead assignment to agents
+o Lead status tracking (New → Contacted → Quoted → Converted/Closed)
+2. Customer Management
+o Maintain customer master database
+o Store demographic details, contact info, and identification documents o Policy history and interaction log
+3. Policy Management
+o Create and track policy applications
+o Manage renewals, lapses, and endorsements o Automated reminders for policy renewals
+4. Customer Service Module
+o Ticket creation for customer complaints/queries o Ticket assignment and escalation
+o SLA monitoring and resolution tracking
+5. Reporting and Analytics
+o Sales pipeline dashboard
+o Agent performance reports
+o Policy sales and renewal reports o Customer service SLA reports
+6. Integration Requirements
+o Email/SMS service integration
+o Document upload and storage system
+5.2 Non-functional Requirements
+• Usability: Intuitive UI for non-technical users
+• Performance: System should support 500+ concurrent users
+• Security: Role-based access, data encryption, audit logs
+• Scalability: Ability to onboard new agents and departments
+• Availability: 99.5% system uptime
+8
+
+6. Methodology
+System Design
+A modular CRM architecture is designed with distinct functional blocks: Lead Management, Policy Issuance, Customer Service, Customer Interaction. Centralized database, automated workflow engine, role-based access control.
+Tools and Technologies Used
+· · · ·
+Relational Database (MySQL or Oracle)
+Web-based CRM interface (Angular/React)
+Cloud deployment (AWS/Azure)
+Integration APIs (for email, SMS, payment gateway)
+· Workflow automation modules
+6.1 Lead Management Workflow (Detailed)
+1. Lead is generated from source (website form, agent input, referral, campaign)
+2. Lead automatically enters CRM with timestamp
+3. Lead is scored based on predefined criteria
+4. CRM auto-assigns lead to agent OR manager assigns manually
+5. Agent initiates contact (call/email/SMS)
+6. Agent updates lead status: New → Contacted → Follow-Up → Quoted →
+Negotiation → Converted/Closed
+7. If converted: lead becomes a customer profile
+8. If closed: system asks for reason (lost to competitor, unreachable, not interested)
+ 9
+
+6.2 Policy Issuance Workflow (Detailed)
+1. Customer details entered or fetched from CRM
+2. Agent fills policy proposal form
+3. KYC documents uploaded & verified
+4. Application sent to underwriting team
+5. Underwriter reviews risk, requests additional info if needed
+6. Underwriter approves OR rejects policy
+7. Premium payment initiated by customer
+8. Payment verified
+9. Policy document generated
+10. Policy stored in CRM and sent to customer via email/SMS
+Policy Issuance Workflow:
+Shows steps from lead source → CRM entry → scoring → assignment → agent contact → status updates (New → Contacted → Follow-Up → Quoted → Negotiation → Converted/Closed) → conversion to customer profile or closure with reason.
+ 10
+
+6.3 Customer Service Workflow (Detailed)
+1. Customer raises issue via phone/email/chat
+2. Service executive logs ticket in CRM
+3. Ticket auto-tagged with category & priority
+4. Assigned to service agent based on workload rules
+5. Agent investigates and provides resolution
+6. If unresolved → escalated to supervisor
+7. Once resolved, ticket marked “Closed”
+8. Customer receives closure notification
+9. CRM logs resolution time for SLA analysis
+Customer Service Workflow:
+Shows customer entry/selection → proposal form completion → KYC upload/verification → underwriting review → payment processing → document generation → policy delivery.
+ 11
+
+6.4 Customer Interaction Workflow
+1. All inbound and outbound calls/emails logged to customer profile
+2. Notes and tasks created for follow-ups
+3. Customer history shown to every user interacting
+Customer Interaction Workflow:
+Shows ticket logging → auto-categorization → agent assignment → investigation → resolution → escalation if needed → closure → SLA logging.
+ 12
+
+7. Implementation
+Execution Step-by-Step
+1. Gather business requirements from all stakeholders.
+2. Build system design and data model for CRM.
+3. Develop and integrate each module as per workflows.
+4. Implement detailed visual workflows using flowchart tools.
+5. Test each module and end-to-end system flows.
+6. Onboard users for training and pilot use.
+7. Collect feedback and optimize processes.
+13
+
+8. Use Cases
+1. A sales agent receives an alert for a new web lead, calls the prospect, adds notes, and schedules a meeting.
+2. A client logs in to check policy status, requests renewal, and uploads a document; all actions are recorded.
+3. Claims team reviews a submitted claim, updates status at each stage, and communicates with customer through the CRM.
+Use Case Diagram (CRM System – Insurance Firm)
+  14
+
+9. Assumptions and Constraints 9.1 Assumptions:
+• Users have basic digital literacy
+• Required infrastructure (internet, devices) is available
+9.2 Constraints:
+• Budget limitations may restrict advanced automation features
+• Compliance requirements may necessitate future system enhancements
+15
+
+10. Results Analysis
+10.1 Outputs Obtained
+· Improved process diagrams for Lead, Policy, Service, and Interaction workflows.
+· Stakeholder needs matched with automated CRM features.
+· Sample process efficiency metrics based on workflow redesign. Tables, Charts, Graphs for Analysis
+    Process
+Lead Response Time
+Conversion Rate Claims Resolution Customer Satisfaction
+Before CRM
+3 days
+15% 10 days 80%
+After CRM
+1 day
+22%
+3 days 93%
+Improvement
+66% faster
++46% 70% faster +16%
+                    10.2 Interpretation of Results
+Implementing the CRM streamlines all business-critical workflows, shortens service times, drives higher customer satisfaction, and increases transparency and compliance.
+• Reduction in lead abandonment rate by 20%
+• Increase in customer service resolution speed
+• Improvement in policy renewal rate
+• Better visibility of sales performance through dashboards
+11. Conclusion
+This CRM system will serve as a central customer engagement and management platform for the insurance firm. It is designed to streamline business processes, enhance data visibility, and enable informed decision-making across departments.
+16
